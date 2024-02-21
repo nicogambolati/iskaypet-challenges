@@ -5,6 +5,7 @@ export default function MyData() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [updated, setUpdated] = useState(false);
+
   const handleInputChange = (event, setState) => {
     setState(event.target.value);
   };
@@ -14,31 +15,47 @@ export default function MyData() {
   };
 
   return (
-    <div className="card">
-        <div className="name">
-          <p className="card-title">Nombre</p>
-          <input
-            type="text" value={name}
-            onChange={(event) => handleInputChange(event, setName)}
-          />
-        </div>
-        <div className="email">
-          <p className="card-title">Email</p>
-          <input
-            type="text" value={email}
-            onChange={(event) => handleInputChange(event, setEmail)}
-          />
-        </div>
-        <div className="phone">
-          <p className="card-title">Telefono</p>
-          <input
-            type="text" value={phone}
-            onChange={(event) => handleInputChange(event, setPhone)}
-          />
-        </div>
-        <div>
-          <button className="btn btn-primary" onClick={handleSave}>Guardar</button>
+    <div className="wrapper-component">
+      <h3 className="d-flex title-page">Mis datos</h3>
+      <div className="card">
+        <div className="card-body input-group flex-column">
+          <div className="name mb-4">
+            <p className="d-flex mb-2 input-name">Nombre</p>
+            <input
+              type="text"
+              value={name}
+              onChange={(event) => handleInputChange(event, setName)}
+              placeholder="Nombre"
+              required
+            />
+          </div>
+          <div className="email mb-4">
+            <p className="d-flex mb-2 input-name">Email</p>
+            <input
+              type="text"
+              value={email}
+              onChange={(event) => handleInputChange(event, setEmail)}
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div className="phone mb-4">
+            <p className="d-flex mb-2 input-name">Telefono</p>
+            <input
+              type="text"
+              value={phone}
+              onChange={(event) => handleInputChange(event, setPhone)}
+              placeholder="Telefono"
+              required
+            />
+          </div>
+          <div className="mt-4">
+            <button className="btn btn-primary " onClick={handleSave}>
+              Guardar
+            </button>
+          </div>
         </div>
       </div>
+    </div>
   );
 }
