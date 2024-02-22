@@ -1,5 +1,6 @@
 
 /* $primary: #639605; */
+/* $dark-grey: #F5F5F5; */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 @font-face {
@@ -19,9 +20,23 @@ body {
 .App {
   text-align: center;
 
+  header {
+    background-color: #FFFFFF;
+
+    button {
+      color: #575757;
+      margin-right: 0;
+    }
+
+    button svg {
+      color: #575757;
+    }
+  }
+
   h3 {
     font-size: 20px;
     color: #555555;
+    font-weight: 700;
   }
 }
 
@@ -83,6 +98,20 @@ body {
     &.btn-primary {
       background-color: #639605;
       border-color: #639605;
+    }
+  }
+}
+
+.horizontal-menu {
+  header {
+    box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
+    border-top: 1px solid #F5F5F5;
+
+    a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: capitalize;
     }
   }
 }

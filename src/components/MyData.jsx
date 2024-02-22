@@ -19,7 +19,7 @@ export default function MyData() {
       <h3 className="d-flex title-page">Mis datos</h3>
       <div className="card">
         <div className="card-body input-group flex-column">
-          <div className="name mb-4">
+          <div className="name mb-3">
             <p className="d-flex mb-2 input-name">Nombre</p>
             <input
               type="text"
@@ -29,7 +29,7 @@ export default function MyData() {
               required
             />
           </div>
-          <div className="email mb-4">
+          <div className="email mb-3">
             <p className="d-flex mb-2 input-name">Email</p>
             <input
               type="text"
@@ -39,7 +39,7 @@ export default function MyData() {
               required
             />
           </div>
-          <div className="phone mb-4">
+          <div className="phone mb-3">
             <p className="d-flex mb-2 input-name">Telefono</p>
             <input
               type="text"
