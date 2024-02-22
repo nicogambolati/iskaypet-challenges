@@ -10,12 +10,6 @@ import CartButton from "./assets/CartButton";
 import MenuIcon from "./assets/MenuIcon";
 import HorizontalMenu from "./HorizontalMenu";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./Home";
-// import About from "./About";
-// import Services from "./Services";
-// import Contact from "./Contact";
-
 export default function Header() {
   return (
     <div>
@@ -36,15 +30,7 @@ export default function Header() {
           <CartButton />
         </Toolbar>
       </AppBar>
-      <Router>
-        <HorizontalMenu />
-        <Routes>
-          <Route path="/" exact component={Home} />
-          {/* <Route path="/about" component={About} />
-                <Route path="/services" component={Services} />
-                <Route path="/contact" component={Contact} /> */}
-        </Routes>
-      </Router>
+      <HorizontalMenu />
     </div>
   );
 }
