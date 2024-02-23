@@ -1,43 +1,5 @@
-
-/* $primary: #639605; */
-/* $dark-grey: #F5F5F5; */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFW50e.ttf) format('truetype');
-  /* Add the font files for different weights if needed */
-}
-
-body {
-  background-color: #EEEEEE !important;
-  font-family: 'Open Sans', sans-serif;
-}
-
-
-.App {
+/* .App {
   text-align: center;
-
-  header {
-    background-color: #FFFFFF;
-
-    button {
-      color: #575757;
-      margin-right: 0;
-    }
-
-    button svg {
-      color: #575757;
-    }
-  }
-
-  h3 {
-    font-size: 20px;
-    color: #555555;
-    font-weight: 700;
-  }
 }
 
 .App-logo {
@@ -73,45 +35,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
-
-.wrapper-component {
-  padding: 32px 16px 16px;
-
-  .card {
-    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.1);
-  }
-
-  .input-name {
-    font-size: 14px;
-  }
-
-  input {
-    width: 100%;
-  }
-
-  button {
-    width: 100%;
-    height: 46px;
-    border-radius: 5px;
-  
-    &.btn-primary {
-      background-color: #639605;
-      border-color: #639605;
-    }
-  }
-}
-
-.horizontal-menu {
-  header {
-    box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
-    border-top: 1px solid #F5F5F5;
-
-    a {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      text-transform: capitalize;
-    }
-  }
-}
+} */

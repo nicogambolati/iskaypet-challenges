@@ -13,10 +13,13 @@
 $primary: #639605;
 $white: #FFFFFF;
 $dark-grey: #575757;
-$font-color: #555555;
+
 $grey1: #F5F5F5;
 $grey2: #EEEEEE;
 $grey3: #B3B3B3;
+$grey4: #777777;
+$grey5: #555555;
+$grey6: #333333;
 
 body {
   background-color: $grey2 !important;
@@ -41,8 +44,10 @@ body {
 
   h3 {
     font-size: 20px;
-    color: $font-color;
     font-weight: 700;
+    line-height: 27.24px;
+    color: $grey5;
+    margin-bottom: 16px;
   }
 }
 
@@ -81,9 +86,23 @@ body {
   }
 }
 
+.btn {
+  width: 100%;
+  height: 46px;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .btn.btn-primary {
   background-color: $primary;
   border-color: $primary;
+
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+  }
 }
 
 .btn.btn-secondary {
@@ -94,7 +113,7 @@ body {
 
 .wrapper-component {
   padding: 32px 16px 16px;
-  
+
   @include media-breakpoint-up(md) {
     width: 50%;
     margin: 0 auto;
@@ -102,6 +121,34 @@ body {
 
   .card {
     box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-body {
+      .item-title {
+        display: flex;
+        justify-content: flex-start;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 16px;
+        line-height: 21.79px;
+        color: $grey6;
+      }
+
+      .item-description {
+        display: flex;
+        text-align: start;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16.34px;
+        color: $grey4;
+      }
+    }
   }
 
   .input-name {
@@ -110,17 +157,6 @@ body {
 
   input {
     width: 100%;
-  }
-
-  button {
-    width: 100%;
-    height: 46px;
-    border-radius: 5px;
-  
-    &.btn-primary {
-      background-color: $primary;
-      border-color: $primary;
-    }
   }
 }
 
@@ -143,12 +179,6 @@ body {
       text-transform: capitalize;
     }
   }
-}
-
-.item-title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    text-transform: capitalize;
 }
 
 .new-task-modal {
