@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from "react";
+import NewTaskModal from "./NewTaskModal";
 
 function Tasks() {
   const [data, setData] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [newTaskTitle, setNewTaskTitle] = useState('');
+  const [newTaskDescription, setNewTaskDescription] = useState('');
+  const TASKS_LIMIT = 3; // Define la constante para el límite de tareas
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos/")
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error(error));
+    fetchData();
   }, []);
+
+  const fetchData = () => {
+    fetch(`https://jsonplaceholder.typicode.com/todos?_limit=${TASKS_LIMIT}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
+  };
 
   const handleDelete = (item) => {
     fetch(`https://jsonplaceholder.typicode.com/todos/${item.id}`, {
@@ -16,12 +28,44 @@ function Tasks() {
     })
     .then(response => {
       if (response.ok) {
-        setData(oldValues => oldValues.filter(oldValue => oldValue.id !== item.id));
+        // Eliminar el elemento del estado
+        setData(prevData => prevData.filter(oldValue => oldValue.id !== item.id));
       } else {
         throw new Error('Failed to delete the item');
       }
     })
     .catch(error => console.error(error));
+  };
+
+  const handleAddTask = () => {
+    const newTask = {
+      title: newTaskTitle,
+      description: newTaskDescription,
+      completed: false
+    };
+
+    fetch(`https://jsonplaceholder.typicode.com/todos`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newTask),
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Failed to add task');
+      }
+    })
+    .then(data => {
+      setData(prevData => [...prevData, data]); // Simplemente agregamos la nueva tarea al estado
+      // Cerrar el modal
+      setShowModal(false);
+    })
+    .catch(error => {
+      console.error(error);
+    });
   };
 
   return (
@@ -42,9 +86,19 @@ function Tasks() {
           <p>Loading data...</p>
         )}
       </div>
-      <button className="btn btn-primary " onClick={""}>
+      <button className="btn btn-primary mt-5" onClick={() => setShowModal(true)}>
         Añadir tarea
       </button>
+
+      <NewTaskModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        handleAddTask={handleAddTask}
+        newTaskTitle={newTaskTitle}
+        setNewTaskTitle={setNewTaskTitle}
+        newTaskDescription={newTaskDescription}
+        setNewTaskDescription={setNewTaskDescription}
+      />
     </div>
   );
 }
