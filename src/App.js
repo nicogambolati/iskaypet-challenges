@@ -1,5 +1,5 @@
 import './App.scss';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Data from './components/Data';
 import Tasks from "./components/Tasks";
@@ -12,6 +12,7 @@ function App() {
     <div className="App">
         <Header />
         <Routes>
+          <Route path="/" element={<Navigate to="/datos" />} />
           <Route path="/datos" element={<Data />} />
           <Route path="/tareas" element={<Tasks />} />
           <Route path="/devoluciones" element={<Returns />} />
