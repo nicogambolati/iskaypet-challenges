@@ -111,6 +111,13 @@ body {
   color: $grey3;
 }
 
+header {
+  .btn {
+    width: fit-content;
+    padding: 6px;
+  }
+}
+
 .wrapper-component {
   padding: 32px 16px 16px;
 
