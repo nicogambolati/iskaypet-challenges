@@ -20,6 +20,9 @@ El proyecto cuenta con una aplicacion en NodeJS y utilizando el frameworkesta de
 
 2. Luego tambien en la carpeta raiz, ejecutar `npm start` para iniciar la aplicacion. Por defecto, la aplicacion iniciara en el puerto **3000**.(http://localhost:3000)
 
+## Deploy
+El proyecto está desplegado y accesible [aquí](https://iskaypet-challenges.onrender.com).
+
 ## Capturas de pantalla.
 ### Mobile (Iphone 14 Pro Max):
 [![screenshot-mobile.png](https://i.postimg.cc/wBX55bw1/screenshot-mobile.png)](https://postimg.cc/wtBsgF8z)
