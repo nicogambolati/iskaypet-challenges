@@ -22,7 +22,7 @@ El proyecto cuenta con una aplicacion en NodeJS y utilizando el frameworkesta de
 
 ## Capturas de pantalla.
 ### Mobile (Iphone 14 Pro Max):
-[![screenshot-mobile.png](https://i.postimg.cc/pdh42xVg/screenshot-mobile.png)](https://postimg.cc/DWhBg9Xg)
+[![screenshot-mobile.png](https://i.postimg.cc/wBX55bw1/screenshot-mobile.png)](https://postimg.cc/wtBsgF8z)
 
 ### Tablet (Ipad Pro):
 [![screenshot-tablet.png](https://i.postimg.cc/cL9GxXR8/screenshot-tablet.png)](https://postimg.cc/w1mGF5b6)
