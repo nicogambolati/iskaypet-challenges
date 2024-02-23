@@ -20,15 +20,12 @@ El proyecto cuenta con una aplicacion en NodeJS y utilizando el frameworkesta de
 
 2. Luego tambien en la carpeta raiz, ejecutar `npm start` para iniciar la aplicacion. Por defecto, la aplicacion iniciara en el puerto **3000**.(http://localhost:3000)
 
-### Captura de pantalla
-Mobile:
-[Iphone 14 Pro Max]
-(src/components/screenshots/screenshot_mobile.png)
+## Capturas de pantalla.
+### Mobile (Iphone 14 Pro Max):
+[![screenshot-mobile.png](https://i.postimg.cc/pdh42xVg/screenshot-mobile.png)](https://postimg.cc/DWhBg9Xg)
 
-Tablet:
-[Ipad Pro]
-(src/components/screenshots/tablet.png)
+### Tablet (Ipad Pro):
+[![screenshot-tablet.png](https://i.postimg.cc/cL9GxXR8/screenshot-tablet.png)](https://postimg.cc/w1mGF5b6)
 
-Desktop:
-[Resolucion: 1440px]
-(src/components/screenshots/screenshot_desktop.png)
+### Desktop (Resolucion: 1440px):
+[![screenshot-desktop.png](https://i.postimg.cc/bw3pGzhr/screenshot-desktop.png)](https://postimg.cc/BjLdkftf)
