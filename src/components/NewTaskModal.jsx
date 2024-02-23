@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button, Form } from 'react-bootstrap';
 
-function NewTaskModal({ showModal, setShowModal, handleAddTask, newTaskTitle, setNewTaskTitle, newTaskDescription, setNewTaskDescription }) {
+const NewTaskModal = ({ showModal, setShowModal, handleAddTask, newTaskTitle, setNewTaskTitle, newTaskDescription, setNewTaskDescription }) => {
   return (
     <Modal className="new-task-modal" show={showModal} onHide={() => setShowModal(false)}>
       <Modal.Header closeButton>

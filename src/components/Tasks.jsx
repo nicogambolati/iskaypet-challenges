@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NewTaskModal from "./NewTaskModal";
 import DeleteButton from "./DeleteButton";
 
-function Tasks() {
+const Tasks = () => {
   const [data, setData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [newTaskTitle, setNewTaskTitle] = useState("");
@@ -36,7 +36,6 @@ function Tasks() {
     })
       .then((response) => {
         if (response.ok) {
-          // Eliminar el elemento del estado
           setData((prevData) =>
             prevData.filter((oldValue) => oldValue.id !== item.id)
           );
@@ -69,8 +68,7 @@ function Tasks() {
         }
       })
       .then((data) => {
-        setData((prevData) => [...prevData, data]); // Simplemente agregamos la nueva tarea al estado
-        // Cerrar el modal
+        setData((prevData) => [...prevData, data]);
         setShowModal(false);
       })
       .catch((error) => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FormGroup, FormControl, Button } from 'react-bootstrap';
 
-export default function MyData() {
+const MyData = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -86,3 +86,5 @@ export default function MyData() {
     </div>
   );
 }
+
+export default MyData;

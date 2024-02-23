@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export class Communications extends Component {
-  render() {
-    return (
-      <div className="wrapper-component">
-        <h3 className="d-flex title-page">Mis comunicaciones</h3>
-      </div>
-    )
-  }
-}
+const Communications = () => (
+  <div className="wrapper-component">
+    <h3 className="d-flex title-page">Mis comunicaciones</h3>
+  </div>
+);
 
-export default Communications
+export default Communications;
