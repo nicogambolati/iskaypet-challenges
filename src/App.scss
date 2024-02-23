@@ -1,7 +1,6 @@
-
-/* $primary: #639605; */
-/* $dark-grey: #F5F5F5; */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import "bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/bootstrap";
 
 @font-face {
   font-family: 'Open Sans';
@@ -11,31 +10,38 @@
   /* Add the font files for different weights if needed */
 }
 
+$primary: #639605;
+$white: #FFFFFF;
+$dark-grey: #575757;
+$font-color: #555555;
+$grey1: #F5F5F5;
+$grey2: #EEEEEE;
+$grey3: #B3B3B3;
+
 body {
-  background-color: #EEEEEE !important;
+  background-color: $grey2 !important;
   font-family: 'Open Sans', sans-serif;
 }
-
 
 .App {
   text-align: center;
 
   header {
-    background-color: #FFFFFF;
+    background-color: $white;
 
     button {
-      color: #575757;
+      color: $dark-grey;
       margin-right: 0;
     }
 
     button svg {
-      color: #575757;
+      color: $dark-grey;
     }
   }
 
   h3 {
     font-size: 20px;
-    color: #555555;
+    color: $font-color;
     font-weight: 700;
   }
 }
@@ -75,12 +81,24 @@ body {
   }
 }
 
+.btn.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn.btn-secondary {
+  background-color: $white;
+  border: none;
+  color: $grey3;
+}
+
 .wrapper-component {
   padding: 32px 16px 16px;
   
-  /*TO DO: Responsive in desktop */
-  /* width: 50%;
-  margin: 0 auto; */
+  @include media-breakpoint-up(md) {
+    width: 50%;
+    margin: 0 auto;
+  }
 
   .card {
     box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.1);
@@ -100,8 +118,8 @@ body {
     border-radius: 5px;
   
     &.btn-primary {
-      background-color: #639605;
-      border-color: #639605;
+      background-color: $primary;
+      border-color: $primary;
     }
   }
 }
@@ -109,7 +127,14 @@ body {
 .horizontal-menu {
   header {
     box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
-    border-top: 1px solid #F5F5F5;
+    border-top: 1px solid $grey1;
+
+    @include media-breakpoint-up(md) {
+      .MuiToolbar-root {
+        display: flex;
+        justify-content: center;
+      }
+    }
 
     a {
       font-family: 'Open Sans', sans-serif;
@@ -121,7 +146,35 @@ body {
 }
 
 .item-title {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     text-transform: capitalize;
+}
+
+.new-task-modal {
+  .modal-header {
+    border-bottom: none;
+  }
+
+  .modal-body {
+    .custom-textarea {
+      resize: vertical;
+      min-height: 156px;
+      max-height: 156px;
+      width: 100%;
+    }
+
+  }
+
+  .modal-footer {
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      flex: 1;
+      margin: 0 5px;
+    }
+  }
 }
