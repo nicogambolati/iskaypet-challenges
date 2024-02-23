@@ -101,7 +101,7 @@ const Tasks = () => {
             ))}
           </div>
         ) : (
-          <p>Loading data...</p>
+          <p>Cargando datos...</p>
         )}
       </div>
       <button
