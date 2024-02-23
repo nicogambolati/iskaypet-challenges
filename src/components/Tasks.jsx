@@ -69,6 +69,8 @@ const Tasks = () => {
       })
       .then((data) => {
         setData((prevData) => [...prevData, data]);
+        setNewTaskTitle('');
+        setNewTaskDescription('');
         setShowModal(false);
       })
       .catch((error) => {
