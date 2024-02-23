@@ -172,11 +172,26 @@ body {
       }
     }
 
-    a {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      text-transform: capitalize;
+    .MuiTabs-root {
+      min-height: 48px;
+
+      .MuiTab-textColorPrimary {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+
+        &.Mui-selected  {
+          color: $primary;
+          font-weight: 700;
+        }
+      }
+
+      .MuiTabs-indicator {
+        background-color: $primary;
+        border-radius: 3px;
+      }
+
     }
   }
 }

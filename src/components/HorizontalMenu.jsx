@@ -12,6 +12,7 @@ const menuItems = [
 
 const HorizontalMenu = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [selectedTab, setSelectedTab] = useState(0);
 
   const handleDrawerOpen = () => {
     setOpenDrawer(true);
@@ -21,17 +22,28 @@ const HorizontalMenu = () => {
     setOpenDrawer(false);
   };
 
+  const handleTabChange = (event, newValue) => {
+    setSelectedTab(newValue);
+  };
+
   return (
     <div className='horizontal-menu'>
       <AppBar position="static">
         <Toolbar>
           <Tabs
+            value={selectedTab}
+            onChange={handleTabChange}
             variant="scrollable"
             scrollButtons="auto"
             aria-label="Horizontal menu"
           >
             {menuItems.map((item, index) => (
-              <Tab key={index} label={item.label} component={Link} to={item.path} />
+              <Tab
+              key={index}
+              label={item.label}
+              component={Link}
+              to={item.path}
+            />
             ))}
           </Tabs>
         </Toolbar>
